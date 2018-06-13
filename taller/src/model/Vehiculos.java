@@ -29,16 +29,7 @@ public abstract class Vehiculos {
         this.cilindros = cilindros;
     }
 
-    
-	public static void add(Vehiculos vehiculos) {
-		System.out.println();
-		
-	}
-
-	public static void addMotocicletas() {
-		
-		
-	}
+    public abstract String getVehiculo();
 
 
 }

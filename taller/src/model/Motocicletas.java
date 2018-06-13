@@ -4,9 +4,14 @@ public class Motocicletas extends Vehiculos {
 
     private boolean encendido;
 
-    public Motocicletas() {
+    public Motocicletas(String vin, int cantCil, int capLit, boolean encendidoElec) {
 		super();
+		setVin(vin);
+		setCilindros(cantCil);
+		setLitros(capLit);
+		encendido = encendidoElec;
 	}
+    
 
 	public boolean isEncendido() {
         return encendido;
@@ -21,5 +26,7 @@ public class Motocicletas extends Vehiculos {
 		return vehiculo;
       
     }
+    
+    
 
 }

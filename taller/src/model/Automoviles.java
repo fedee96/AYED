@@ -1,9 +1,16 @@
 package model;
-
 public class Automoviles extends Vehiculos {
 
-    public static Object addAutomoviles;
 	private boolean airbags;
+
+	
+	public Automoviles(String vin, int cantCil, int capLit, boolean airbags){
+		super();
+		setVin(vin);
+		setCilindros(cantCil);
+		setLitros(capLit);
+		this.airbags= airbags;
+	}
 
     public boolean isAirbags() {
         return airbags;
@@ -13,19 +20,14 @@ public class Automoviles extends Vehiculos {
         this.airbags = airbags;
     }
 
-    public Automoviles(boolean airbags) {
-        super();
-        this.airbags = airbags;
-    }
-    
-    public Automoviles() {
-		getVehiculo();
-	}
-
 	public boolean getAirbags() {
     	return airbags;
     }
-
+	public String tieneAirbag() {
+		if (airbags== true)
+			return "si";
+		return "no";
+	}
 	public String getVehiculo() {
 		String vehiculo = "VIN: "+getVin()+"Litros: "+getLitros()+"Cilindros: "+getCilindros()+"Airbags: "+getAirbags();;
 		return vehiculo;
